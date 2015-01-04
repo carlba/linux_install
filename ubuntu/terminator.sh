@@ -1,4 +1,4 @@
 #!/bin/bash
-sudo add-apt-repository -f ppa:gnome-terminator
+sudo add-apt-repository -y ppa:gnome-terminator
 sudo apt-get update
-sudo apt-get install -f terminator
+sudo apt-get install -y terminator
