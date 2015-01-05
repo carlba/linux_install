@@ -2,6 +2,10 @@
 
 source ../common/lib.sh
 
+./python.sh
+
+sudo pip install --upgrade virtualenvwrapper
+
 virtualenvwrapper=$(cat <<END
 #Setup virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
