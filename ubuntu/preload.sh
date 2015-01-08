@@ -1,3 +1,3 @@
 #!/bin/bash
 sudo apt-get update
-apt-get -y install preload
+sudo apt-get -y install preload
