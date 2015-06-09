@@ -1,7 +1,15 @@
 #!/bin/bash
 
 source ../common/lib.sh
+current_dir=$PWD
+tmp_dir=$(mktemp -d)
 
-sudo add-apt-repository -y ppa:gnome-terminator
-sudo apt-get update
-apt-get -y install terminator
+cd $tmp_dir
+
+sudo add-apt-repository -f ppa:template                                                                                                                                                                                                                                                                   
+sudo apt-get update                                                                                                                                                                                                                                                                                                
+sudo apt-get -y install template
+
+cd $current_dir
+
+rm -rf $tmp_dir
