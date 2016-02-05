@@ -16,3 +16,8 @@ function append_if_not_exist {
         return 1
     fi
 }
+
+function get_linux_dist {
+    linux_dist=$(common/detect-linux-dist/detect-linux-dist)
+    echo $linux_dist | tr '[:upper:]' '[:lower:]'
+}
