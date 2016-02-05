@@ -6,9 +6,9 @@ tmp_dir=$(mktemp -d)
 
 cd $tmp_dir
 
-sudo add-apt-repository -f ppa:template
-sudo apt-get update
-sudo apt-get -y install template
+wget https://winpdb.googlecode.com/files/winpdb-1.4.8.zip
+unzip winpdb-1.4.8.zip
+pip install -e winpdb-1.4.8
 
 cd $current_dir
 
