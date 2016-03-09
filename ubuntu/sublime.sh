@@ -7,7 +7,14 @@ sudo apt-get update
 sudo apt-get -y install sublime-text-installer
 sudo ln -s /opt/sublime_text/sublime_text /usr/bin/sublime
 
-mkdir -p ~/.config/sublime-text-3/Packages
-cd ~/.config/sublime-text-3/Packages/
-rm -r User
-ln -s ~/Dropbox/settings/Appdata/Sublime/User
+
+if [[ -d "$HOME/Dropbox"  ]] ; then  
+  mkdir -p ~/.config/sublime-text-3/Packages
+  cd ~/.config/sublime-text-3/Packages/
+  rm -r User
+  ln -s ~/Dropbox/settings/Appdata/Sublime/User
+else
+  echo "Dropbox is not installed. Sublime settings will not be synced using Dropbox"
+fi
+
+
