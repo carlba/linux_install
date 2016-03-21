@@ -17,4 +17,8 @@ else
   echo "Dropbox is not installed. Sublime settings will not be synced using Dropbox"
 fi
 
+pushd ~/.config/sublime-text-3/Installed\ Packages/
+wget https://sublime.wbond.net/Package%20Control.sublime-package
+popd
+
 
