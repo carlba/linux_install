@@ -11,6 +11,7 @@ sudo ln -s /opt/sublime_text/sublime_text /usr/bin/sublime
 if [[ -d "$HOME/Dropbox"  ]] ; then  
   mkdir -p ~/.config/sublime-text-3/Packages
   cd ~/.config/sublime-text-3/Packages/
+  unlink User
   rm -r User
   ln -s ~/Dropbox/settings/Appdata/Sublime/User
 else

@@ -21,3 +21,11 @@ function get_linux_dist {
     linux_dist=$(common/detect-linux-dist/detect-linux-dist)
     echo $linux_dist | tr '[:upper:]' '[:lower:]'
 }
+
+function get_64_or_32 {
+    echo -n $(getconf LONG_BIT)
+}
+
+function cleanup {
+    sudo apt-get autoremove
+}
