@@ -21,6 +21,10 @@ fi
 pushd ~/.config/sublime-text-3/Installed\ Packages/ > /dev/null
 
 [[ ! -f Package\ Control.sublime-package ]] && wget --no-check-certificate https://sublime.wbond.net/Package%20Control.sublime-package
+
+ 
 popd > /dev/null
 
-
+pushd /home/cada/.config/sublime-text-3/Packages > /dev/null
+git clone -b fix-mdprev-incompat https://github.com/bordaigorl/sublime-evernote
+popd > /dev/null
