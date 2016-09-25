@@ -14,6 +14,9 @@ sudo apt-get -y install tmux
 
 [[ ! -L ~/.tmux.conf ]] && curl https://raw.githubusercontent.com/carlba/linuxconf/master/.tmux.conf -Os -o ~/.tmux.conf
 
+#Install tmux tpm plugins
+$HOME/.tmux/plugins/tpm/bin/install_plugins
+
 cd $current_dir
 
 rm -rf $tmp_dir
