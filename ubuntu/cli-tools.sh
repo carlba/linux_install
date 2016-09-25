@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo app-get install htop vim-athena
+sudo apt-get install htop vim-athena
