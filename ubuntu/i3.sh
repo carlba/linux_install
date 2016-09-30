@@ -11,7 +11,7 @@ sudo apt-get update
 sudo apt-get --allow-unauthenticated install sur5r-keyring
 sudo apt-get update
 sudo apt-get -y install i3
-
+sudo pip install py3status
 
 cd $current_dir
 
