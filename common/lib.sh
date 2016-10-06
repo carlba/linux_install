@@ -27,5 +27,5 @@ function get_64_or_32 {
 }
 
 function cleanup {
-    sudo apt-get autoremove
+    sudo apt-get -y autoremove
 }
