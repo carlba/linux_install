@@ -19,7 +19,7 @@ function append_if_not_exist {
 
 function get_linux_dist {
     linux_dist=$(common/detect-linux-dist/detect-linux-dist)
-    echo $linux_dist | tr '[:upper:]' '[:lower:]'
+    echo ${linux_dist} | tr '[:upper:]' '[:lower:]'
 }
 
 function get_64_or_32 {

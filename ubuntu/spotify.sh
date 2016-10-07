@@ -4,7 +4,7 @@ source ../common/lib.sh
 current_dir=$PWD
 tmp_dir=$(mktemp -d)
 
-cd $tmp_dir
+cd ${tmp_dir}
 
 # Taken from: https://www.spotify.com/se/download/linux/
 
@@ -21,6 +21,6 @@ sudo apt-get update
 # 4. Install Spotify
 sudo apt-get install spotify-client
 
-cd $current_dir
+cd ${current_dir}
 
-rm -rf $tmp_dir
+rm -rf ${tmp_dir}

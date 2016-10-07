@@ -11,6 +11,6 @@ cd warp
 sudo pip install -e .
 
 cd ../tarsync
-sudo pip install -e ·
+sudo pip install -e .
 
 

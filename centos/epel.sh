@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 cat <<EOM >/etc/yum.repos.d/epel-bootstrap.repo
 [epel]
@@ -8,7 +8,7 @@ failovermethod=priority
 enabled=0
 gpgcheck=0
 EOM
- 
+
 yum --enablerepo=epel -y install epel-release
 rm -f /etc/yum.repos.d/epel-bootstrap.repo
 
