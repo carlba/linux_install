@@ -5,7 +5,7 @@ current_dir=$PWD
 tmp_dir=$(mktemp -d)
 
 
-cd $tmp_dir
+cd ${tmp_dir}
 
 cleanup
 sudo apt-get -y install tmux
@@ -17,6 +17,6 @@ sudo apt-get -y install tmux
 #Install tmux tpm plugins
 $HOME/.tmux/plugins/tpm/bin/install_plugins
 
-cd $current_dir
+cd ${current_dir}
 
-rm -rf $tmp_dir
+rm -rf ${tmp_dir}
