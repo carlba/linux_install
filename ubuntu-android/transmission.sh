@@ -15,7 +15,11 @@ sudo usermod -a -G aid_inet debian-transmission
 
 mkdir -p $HOME/Downloads/transmission
 
+sudo systemctl enable transmission-daemon
+
 echo 'Please update /etc/transmission/settings.json with the correct download folder'
+
+
 
 
 cd ${current_dir}
