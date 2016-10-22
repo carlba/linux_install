@@ -11,11 +11,15 @@ sudo apt-get -y install shellcheck
 
 
 if [[ -d "$HOME/Dropbox"  ]] ; then  
-  [[ ! -d "$HOME/.config/sublime-text-3/Packages" ]] && mkdir -p "$HOME/.config/sublime-text-3/Packages"
-  cd ~/.config/sublime-text-3/Packages/
-  [[ -L User ]] && unlink User
-  [[ -d User ]] && rm -r User
-  ln -s ~/Dropbox/settings/Appdata/Sublime/User
+  if [[ -d "$HOME/.config/sublime-text-3/Packages" ]]; then
+    cd ~/.config/sublime-text-3/Packages/
+    [[ -L User ]] && unlink User
+    [[ -d User ]] && rm -r User
+  else
+    mkdir -p "$HOME/.config/sublime-text-3/Packages"
+  fi
+  cd "$HOME/.config/sublime-text-3/"
+  ln -s ~/Dropbox/settings/Appdata/Sublime/User .
 else
   echo "Dropbox is not installed. Sublime settings will not be synced using Dropbox"
 fi
