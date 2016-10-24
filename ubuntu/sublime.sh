@@ -5,6 +5,8 @@ source ../common/lib.sh
 sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
 sudo apt-get update
 sudo apt-get -y install sublime-text-installer
+
+sudo apt-get -y install shellcheck
 [[ ! -L "/usr/bin/sublime" ]] && sudo ln -s /opt/sublime_text/sublime_text /usr/bin/sublime
 
 
@@ -29,6 +31,8 @@ pushd ~/.config/sublime-text-3/Installed\ Packages/ > /dev/null
  
 popd > /dev/null
 
-pushd /home/cada/.config/sublime-text-3/Packages > /dev/null
-git clone -b fix-mdprev-incompat https://github.com/bordaigorl/sublime-evernote
+if [[ ! -d "$HOME/.config/sublime-text-3/Packages/sublime-evernote" ]];then
+  pushd $HOME/.config/sublime-text-3/Packages > /dev/null
+  git clone -b fix-mdprev-incompat https://github.com/bordaigorl/sublime-evernote
+fi
 popd > /dev/null
