@@ -6,7 +6,7 @@ tmp_dir=$(mktemp -d)
 
 cd ${tmp_dir}
 
-sudo add-apt-repository -f ppa:no1wantdthisname/ppa
+sudo add-apt-repository -y ppa:no1wantdthisname/ppa
 sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get -y install fontconfig-infinality
