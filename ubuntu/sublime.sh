@@ -18,7 +18,7 @@ if [[ -d "$HOME/Dropbox"  ]] ; then
   else
     mkdir -p "$HOME/.config/sublime-text-3/Packages"
   fi
-  cd "$HOME/.config/sublime-text-3/"
+  cd "$HOME/.config/sublime-text-3/Packages"
   ln -s ~/Dropbox/settings/Appdata/Sublime/User .
 else
   echo "Dropbox is not installed. Sublime settings will not be synced using Dropbox"

@@ -6,7 +6,9 @@ tmp_dir=$(mktemp -d)
 
 cd ${tmp_dir}
 
-! which npm && curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && sudo apt-get install -y nodejs
+sudo add-apt-repository -f ppa:template
+sudo apt-get update
+sudo apt-get -y install template
 
 cd ${current_dir}
 
