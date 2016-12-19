@@ -3,7 +3,7 @@
 source ../common/lib.sh
 current_dir=$PWD
 tmp_dir=$(mktemp -d)
-file_name=smartgit-8_0_1.deb
+file_name=smartgit-8_0_3.deb
 cd ${tmp_dir}
 
 wget http://www.syntevo.com/static/smart/download/smartgit/${file_name}
